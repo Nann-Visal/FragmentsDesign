@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/id_homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/navigate_home"
+        />
+    <item
+        android:id="@+id/id_coursesFragment"
+        android:icon="@drawable/ic_courses"
+        android:title="@string/navigate_courses"/>
+    <item
+        android:id="@+id/id_chartFragment"
+        android:icon="@drawable/ic_chart"
+        android:title="@string/navigate_chart"/>
+    <item
+        android:id="@+id/id_accountFragments"
+        android:icon="@drawable/ic_account"
+        android:title="@string/navigate_account"/>
+    <item
+        android:id="@+id/id_moreFragment"
+        android:icon="@drawable/ic_more"
+        android:title="@string/navigate_more"/>
+</menu>

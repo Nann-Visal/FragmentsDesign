@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FragmentsDesign</string>
+
+    <!--    bottom navigate label-->
+    <string name="navigate_home">Home</string>
+    <string name="navigate_courses">Courses</string>
+    <string name="navigate_chart">Chart</string>
+    <string name="navigate_account">Account</string>
+    <string name="navigate_more">More</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search">Search . . . .</string>
+    <string name="descImageButtonAcc">go to account activity</string>
+    <string name="txt_username">Hello Kim !</string>
+    <string name="txt_cardtitle">Continue To</string>
+    <string name="txt_coursetitle">Mobile Dev. Course</string>
+    <string name="txt_progresslabel">65% Completed</string>
+    <string name="txt_courselabelpp">Popular Courses</string>
+    <string name="btn_seeall">See All</string>
+    <string name="txt_courselabelall">All Courses</string>
+    <string name="txt_cardallctitle">Mobile Application Dev.I</string>
+    <string name="txt_coursedeatial">explore the power of android application development!</string>
+    <string name="txt_ppcourses">SoftWare Engineering</string>
+    <string name="btn_gotodesc">btn go to detail</string>
+
+</resources>

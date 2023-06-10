@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_course"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_username"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgUserAccount"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ic_account_bkg"
+        android:contentDescription="@string/descImageButtonAcc"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/txtSearching"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/ic_search_bkg"
+        android:focusable="false"
+        app:closeIcon="@drawable/ic_close_searchtxt"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="@id/imgUserAccount"
+        app:layout_constraintStart_toStartOf="@id/txtUsername"
+        app:layout_constraintTop_toBottomOf="@id/txtUsername"
+        app:queryBackground="@null"
+        app:queryHint="Search here . . . . . . ."
+        app:searchHintIcon="@null"
+        app:searchIcon="@drawable/ic_search" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@id/txtSearching"
+        app:layout_constraintStart_toStartOf="@id/txtSearching"
+        app:layout_constraintTop_toBottomOf="@id/txtSearching">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:padding="16dp"
+                android:layout_marginHorizontal="4dp"
+                app:cardBackgroundColor="#004064"
+                app:cardCornerRadius="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtCardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="35dp"
+                        android:text="@string/txt_cardtitle"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtCourseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_coursetitle"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="@id/txtCardTitle"
+                        app:layout_constraintTop_toBottomOf="@id/txtCardTitle" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarView"
+                        style="?android:progressBarStyleHorizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressTint="@android:color/holo_green_light"
+                        app:layout_constraintStart_toStartOf="@id/txtCourseTitle"
+                        app:layout_constraintTop_toBottomOf="@id/txtCourseTitle" />
+
+                    <TextView
+                        android:id="@+id/txtProgressLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/txt_progresslabel"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="@id/progressBarView"
+                        app:layout_constraintTop_toBottomOf="@id/progressBarView" />
+
+                    <ImageView
+                        android:id="@+id/imgCardLogo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_logoi"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtCourseTitle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp">
+
+                <TextView
+                    android:id="@+id/txtCourseLabelPP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_courselabelpp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnSeeAllPPC"
+                    style="@style/Widget.AppCompat.ActionButton.CloseMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_seeall_bkg"
+                    android:paddingVertical="0dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/btn_seeall"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry,DuplicateSpeakableTextCheck" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <!--                recycler view of popular courses-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPPCourses"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="4dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp">
+
+                <TextView
+                    android:id="@+id/txtCourseLabelAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_courselabelall"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnSeeAllAllC"
+                    style="@style/Widget.AppCompat.ActionButton.CloseMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_seeall_bkg"
+                    android:paddingVertical="0dp"
+                    android:paddingEnd="4dp"
+                    android:text="@string/btn_seeall"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlSymmetry" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            recycler view of all courses-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewAllCourses"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
